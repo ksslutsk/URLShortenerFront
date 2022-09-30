@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="column">
+    <div class="row add-el">
+        <input placeholder="url" #newElIn>
+        <button id="add-new-el" (click)="addUrl(newElIn.value)">Додати новий елемент</button>
+    </div>
+    
+    <div *ngFor="let item of data" class="item-list row"> 
+        <label>{{item.id}}</label>
+        <a >{{item.shortURL}}</a>
+        <a href="">{{item.longURL}}</a>
+    </div>
+</div>
